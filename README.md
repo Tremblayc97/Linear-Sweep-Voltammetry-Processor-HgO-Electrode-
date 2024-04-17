@@ -24,7 +24,7 @@ folder_path = ttk.filedialog.askdirectory(title="Select Folder")
 ttk.Button(frm, text="next", command=root.destroy).grid(column=2, row=0)
 root.mainloop()
 
-# Check if a folder was selected
+#Check if a folder was selected
 if folder_path:
     # Get a list of all CSV files in the selected directory
     csv_files = glob.glob(folder_path + '/*.csv')
