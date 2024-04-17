@@ -1,6 +1,7 @@
 Processes linear sweep voltammetry data or cyclic voltammetry data with conversions from a HgO electrode at pH 12.999 (maybe make so you can select ph in the future_
 selects all data from a folder given they are labelled voltage and current.
 
+#imports
 import matplotlib.pyplot as plt
 import pandas as pd
 import glob
@@ -14,11 +15,11 @@ import math
 
     
 
-#Opens a GUI for the user to select a folder to import XRD diffractograms from
+#Opens a GUI for the user to select a folder to import data
 root = ttk.Tk()
 frm = ttk.Frame(root)
 frm.grid()
-ttk.Label(frm, text="Select folder that contains Raman data.").grid(column=0, row=0)
+ttk.Label(frm, text="Select folder that contains voltammetry data.").grid(column=0, row=0)
 folder_path = ttk.filedialog.askdirectory(title="Select Folder")
 ttk.Button(frm, text="next", command=root.destroy).grid(column=2, row=0)
 root.mainloop()
